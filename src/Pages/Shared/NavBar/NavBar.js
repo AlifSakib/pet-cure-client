@@ -48,7 +48,7 @@ export const NavBar = () => {
           className="inline-flex items-center"
         >
           <svg
-            className="w-12 text-deep-orange-accent-700"
+            className="w-10 text-pink-900"
             viewBox="0 0 24 24"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -64,8 +64,8 @@ export const NavBar = () => {
             />
           </svg>
           <span className="ml-2 text-2xl font-bold tracking-wide text-gray-800 uppercase font-lob">
-            <span>Pet</span>
-            <span className="text-deep-orange-accent-700">Cure</span>
+            <span className="text-blue-900">Pet</span>
+            <span className="text-pink-900">Cure</span>
           </span>
         </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -73,9 +73,9 @@ export const NavBar = () => {
           <li>
             <Link
               to="/login"
-              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-orange-accent-700hover:bg-deep-orange-accent-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
+              className="inline-flex items-center justify-center w-full h-10 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
+              aria-label="Log in"
+              title="Log in"
             >
               Log in
             </Link>
@@ -89,14 +89,11 @@ export const NavBar = () => {
             className={
               isMenuOpen
                 ? "hidden"
-                : "p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-orange-accent-700 "
+                : "p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-gray-200"
             }
             onClick={() => setIsMenuOpen(true)}
           >
-            <svg
-              className="w-5 text-black hover:text-white"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-5 text-pink-900" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
                 d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
@@ -123,7 +120,7 @@ export const NavBar = () => {
                       className="inline-flex items-center"
                     >
                       <svg
-                        className="w-12 text-deep-orange-accent-700 "
+                        className="w-10 text-pink-900 "
                         viewBox="0 0 24 24"
                         strokeLinejoin="round"
                         strokeWidth="2"
@@ -139,10 +136,8 @@ export const NavBar = () => {
                         />
                       </svg>
                       <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase font-lob">
-                        <span>Pet</span>
-                        <span className="text-deep-orange-accent-700">
-                          Cure
-                        </span>
+                        <span className="text-blue-900">Pet</span>
+                        <span className="text-pink-900">Cure</span>
                       </span>
                     </Link>
                   </div>
@@ -171,7 +166,7 @@ export const NavBar = () => {
                     <li>
                       <Link
                         to="/login"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-orange-accent-400 hover:bg-deep-orange-accent-700 focus:shadow-outline focus:outline-none"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
                         aria-label="Log in"
                         title="Log in"
                       >
