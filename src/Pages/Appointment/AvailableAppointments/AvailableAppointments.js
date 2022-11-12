@@ -4,6 +4,7 @@ import AppointmentOption from "./AppointmentOption";
 
 const AvailableAppointments = ({ selected }) => {
   const [options, setOptions] = useState([]);
+
   useEffect(() => {
     fetch("appointmentsOptions.json")
       .then((res) => res.json())
@@ -14,13 +15,14 @@ const AvailableAppointments = ({ selected }) => {
       <p className="text-center text-2xl text-blue-900">
         Available Appointments on {format(selected, "PP")}
       </p>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-16">
+      <div className="relative grid lg:grid-cols-3 md:grid-cols-2 gap-6 mt-16">
         {options.map((option) => (
           <AppointmentOption
             key={option._id}
             option={option}
           ></AppointmentOption>
         ))}
+        <div></div>
       </div>
     </div>
   );

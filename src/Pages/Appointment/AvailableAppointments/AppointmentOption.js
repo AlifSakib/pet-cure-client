@@ -1,14 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import BookingModal from "../BookingModal/BookingModal";
 
 const AppointmentOption = ({ option }) => {
   const { name, slots } = option;
+  const [modal, setModal] = useState(false);
+
+  const handleModal = (modal) => {
+    setModal(modal);
+  };
+
   return (
-    <div className="">
-      <Link
-        to=""
-        class="group flex flex-col justify-between rounded-sm bg-white p-8 shadow-xl transition-shadow hover:shadow-lg h-full"
-      >
+    <div>
+      <div class="relative group flex flex-col justify-between rounded-sm bg-white p-8 shadow-xl transition-shadow hover:shadow-lg h-full">
         <div>
           <h3 class="text-5xl font-bold text-blue-900">100+</h3>
           <div class="mt-4 border-t-2 border-yellow-900 pt-2">
@@ -24,8 +27,11 @@ const AppointmentOption = ({ option }) => {
           </div>
         </div>
 
-        <div class="mt-16 inline-flex items-center text-blue-900">
-          <p class="text-lg font-medium">How we did it</p>
+        <button
+          onClick={() => setModal(!modal)}
+          class="mt-16 inline-flex items-center text-blue-900"
+        >
+          <p class="text-lg font-medium">Book Appointment</p>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +47,20 @@ const AppointmentOption = ({ option }) => {
               d="M17 8l4 4m0 0l-4 4m4-4H3"
             />
           </svg>
+        </button>
+        <div>
+          {modal && (
+            <div className="absolute w-full z-10 left-0 bottom-16">
+              <BookingModal
+                modal={modal}
+                setModal={setModal}
+                handleModal={handleModal}
+                option={option}
+              ></BookingModal>
+            </div>
+          )}
         </div>
-      </Link>
+      </div>
     </div>
   );
 };
