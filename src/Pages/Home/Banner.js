@@ -7,7 +7,7 @@ const Banner = () => {
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-            <div className="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+            <div className="relative h-64 overflow-hidden  sm:h-80 lg:order-last lg:h-full">
               <img
                 alt="Party"
                 src={image}
@@ -16,7 +16,7 @@ const Banner = () => {
             </div>
 
             <div className="lg:py-24">
-              <h2 className="text-3xl font-bold sm:text-4xl">
+              <h2 className="text-6xl font-bold sm:text-4xl">
                 Grow your audience
               </h2>
 
@@ -29,7 +29,7 @@ const Banner = () => {
 
               <Link
                 to="#"
-                className="mt-8 inline-flex items-center rounded border hover:border-blue-900  px-8 py-3 text-white hover:bg-transparent hover:text-blue-900 focus:outline-none focus:ring active:text-indigo-500 bg-gradient-to-r from-blue-900 to-pink-900 hover:from-white hover:to-white"
+                className="mt-8 inline-flex items-center border hover:border-blue-900  px-8 py-4 text-white hover:bg-transparent hover:text-blue-900 focus:outline-none focus:ring active:text-indigo-500 bg-gradient-to-r from-blue-900 to-pink-900 hover:from-white hover:to-white"
               >
                 <span className="text-sm font-medium "> Get Started </span>
 

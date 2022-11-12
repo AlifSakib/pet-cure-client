@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <div className="w-9/12 mx-auto mt-24">
-      <div className="text-6xl mb-12 underline underline-offset-4">
+      <div className="text-6xl mb-12 underline underline-offset-4 text-light-blue-900">
         <h1>Our Services</h1>
       </div>
       <div className=" grid grid-cols-3  gap-6">

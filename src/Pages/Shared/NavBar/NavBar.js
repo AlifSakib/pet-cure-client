@@ -48,7 +48,7 @@ export const NavBar = () => {
           className="inline-flex items-center"
         >
           <svg
-            className="w-10 text-pink-900"
+            className="w-10 text-blue-900"
             viewBox="0 0 24 24"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -63,7 +63,7 @@ export const NavBar = () => {
               d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <span className="ml-2 text-2xl font-bold tracking-wide text-gray-800 uppercase font-lob">
+          <span className="ml-2 text-3xl font-bold tracking-wide text-gray-800 uppercase font-lob">
             <span className="text-blue-900">Pet</span>
             <span className="text-pink-900">Cure</span>
           </span>
@@ -73,7 +73,7 @@ export const NavBar = () => {
           <li>
             <Link
               to="/login"
-              className="inline-flex items-center justify-center w-full h-10 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
               aria-label="Log in"
               title="Log in"
             >
