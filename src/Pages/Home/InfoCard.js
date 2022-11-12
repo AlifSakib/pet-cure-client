@@ -3,47 +3,88 @@ import { Link } from "react-router-dom";
 
 const InfoCard = () => {
   return (
-    <div className=" w-9/12 mx-auto grid grid-cols-3 gap-6">
-      <div className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
-        <Link className="block rounded-xl bg-white p-6 sm:p-8" to="#">
-          <div className="mt-16 sm:pr-8">
-            <h3 className="text-xl font-bold text-gray-900">
-              Science of Chemistry
-            </h3>
+    <div className=" w-9/12 mx-auto mt-16">
+      <div className="grid grid-cols-3 gap-6">
+        <Link
+          to="#"
+          className="relative block rounded-sm border-t-4 border-pink-600 p-8 pb-24 shadow-xl"
+        >
+          <h3 className="text-4xl font-bold">100+</h3>
+          <p className="mt-4 text-lg font-medium text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae, provident.
+          </p>
 
-            <p className="mt-2 text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
-              adipisci.
-            </p>
-          </div>
+          <span className="absolute bottom-8 right-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10 text-pink-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </span>
         </Link>
-      </div>
-      <div className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
-        <Link className="block rounded-xl bg-white p-6 sm:p-8" to="#">
-          <div className="mt-16 sm:pr-8">
-            <h3 className="text-xl font-bold text-gray-900">
-              Science of Chemistry
-            </h3>
+        <Link
+          to="#"
+          className="relative block rounded-sm border-t-4 border-pink-600 p-8 pb-24 shadow-xl"
+        >
+          <h3 className="text-4xl font-bold">100+</h3>
+          <p className="mt-4 text-lg font-medium text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae, provident.
+          </p>
 
-            <p className="mt-2 text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
-              adipisci.
-            </p>
-          </div>
+          <span className="absolute bottom-8 right-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10 text-pink-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </span>
         </Link>
-      </div>
-      <div className="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
-        <Link className="block rounded-xl bg-white p-6 sm:p-8" to="#">
-          <div className="mt-16 sm:pr-8">
-            <h3 className="text-xl font-bold text-gray-900">
-              Science of Chemistry
-            </h3>
+        <Link
+          to="#"
+          className="relative block rounded-sm border-t-4 border-pink-600 p-8 pb-24 shadow-xl"
+        >
+          <h3 className="text-4xl font-bold">100+</h3>
+          <p className="mt-4 text-lg font-medium text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Repudiandae, provident.
+          </p>
 
-            <p className="mt-2 text-sm text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
-              adipisci.
-            </p>
-          </div>
+          <span className="absolute bottom-8 right-8">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-10 text-pink-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </span>
         </Link>
       </div>
     </div>
