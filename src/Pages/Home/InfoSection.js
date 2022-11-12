@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const InfoSection = () => {
   return (
     <div>
-      <section className="w-9/12 mx-auto">
+      <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
+          <div class="grid grid-cols-1 lg:h-96 lg:grid-cols-2">
             <div class="relative z-10 lg:py-16">
               <div class="relative h-64 sm:h-80 lg:h-full">
                 <img

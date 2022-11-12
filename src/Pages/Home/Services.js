@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div className="w-9/12 mx-auto mt-24">
+    <div className=" px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="text-6xl mb-12 underline underline-offset-4 text-light-blue-900">
         <h1>Our Services</h1>
       </div>
