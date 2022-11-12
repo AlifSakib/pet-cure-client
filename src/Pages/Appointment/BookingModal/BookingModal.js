@@ -1,7 +1,10 @@
-import React from "react";
+import { format } from "date-fns";
+import React, { useState } from "react";
 
-const BookingModal = ({ handleModal, modal, option }) => {
+const BookingModal = ({ handleModal, modal, option, selected }) => {
   const { name, slots } = option;
+  const date = format(selected, "PP");
+  const [selectedOption, setSetSelectedOerson] = useState(slots[0]);
   return (
     <div>
       <div id="booking-modal" class="rounded-xl  p-4 shadow-xl bg-blue-900">
@@ -32,75 +35,41 @@ const BookingModal = ({ handleModal, modal, option }) => {
             <p class="mt-1 text-sm text-white">{name}</p>
             <form>
               <div className="mb-2">
-                <label
-                  for="UserEmail"
-                  class="block text-xs font-medium text-white mt-1 "
-                >
-                  Email
-                </label>
-
                 <input
-                  type="email"
+                  type="text"
+                  id="UserEmail"
+                  defaultValue={date}
+                  disabled
+                  placeholder="john@rhcp.com"
+                  class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+                />
+              </div>
+              <div className="mb-2">
+                <select name="" id="" className="w-full rounded-lg">
+                  {slots.map((slot) => (
+                    <option value={slot}>{slot}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="mb-2">
+                <input
+                  type="text"
                   id="UserEmail"
                   placeholder="john@rhcp.com"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                 />
               </div>
               <div className="mb-2">
-                <label
-                  for="UserEmail"
-                  class="block text-xs font-medium text-white"
-                >
-                  Email
-                </label>
-
                 <input
-                  type="email"
+                  type="text"
                   id="UserEmail"
                   placeholder="john@rhcp.com"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
                 />
               </div>
               <div className="mb-2">
-                <label
-                  for="UserEmail"
-                  class="block text-xs font-medium text-white"
-                >
-                  Email
-                </label>
-
                 <input
-                  type="email"
-                  id="UserEmail"
-                  placeholder="john@rhcp.com"
-                  class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                />
-              </div>
-              <div className="mb-2">
-                <label
-                  for="UserEmail"
-                  class="block text-xs font-medium text-white"
-                >
-                  Email
-                </label>
-
-                <input
-                  type="email"
-                  id="UserEmail"
-                  placeholder="john@rhcp.com"
-                  class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
-                />
-              </div>
-              <div className="mb-2">
-                <label
-                  for="UserEmail"
-                  class="block text-xs font-medium text-white"
-                >
-                  Email
-                </label>
-
-                <input
-                  type="email"
+                  type="text"
                   id="UserEmail"
                   placeholder="john@rhcp.com"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"

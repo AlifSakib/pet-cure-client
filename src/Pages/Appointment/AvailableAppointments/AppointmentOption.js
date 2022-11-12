@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BookingModal from "../BookingModal/BookingModal";
 
-const AppointmentOption = ({ option }) => {
+const AppointmentOption = ({ option, selected }) => {
   const { name, slots } = option;
   const [modal, setModal] = useState(false);
 
@@ -56,6 +56,7 @@ const AppointmentOption = ({ option }) => {
                 setModal={setModal}
                 handleModal={handleModal}
                 option={option}
+                selected={selected}
               ></BookingModal>
             </div>
           )}

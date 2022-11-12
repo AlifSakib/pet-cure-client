@@ -20,6 +20,7 @@ const AvailableAppointments = ({ selected }) => {
           <AppointmentOption
             key={option._id}
             option={option}
+            selected={selected}
           ></AppointmentOption>
         ))}
         <div></div>
