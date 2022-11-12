@@ -1,7 +1,7 @@
 [
   {
     "_id": 1,
-    "name": "Teeth Orthodontics",
+    "name": "Wellness & Vacination",
     "slots": [
       "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
@@ -23,7 +23,7 @@
   },
   {
     "_id": 2,
-    "name": "Cosmetic Dentistry",
+    "name": "Surgery",
     "slots": [
       "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
@@ -45,7 +45,7 @@
   },
   {
     "_id": 3,
-    "name": "Teeth Cleaning",
+    "name": "Dentistry",
     "slots": [
       "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
@@ -67,7 +67,7 @@
   },
   {
     "_id": 4,
-    "name": "Cavity Protection",
+    "name": "Acupunture",
     "slots": [
       "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
@@ -89,12 +89,12 @@
   },
   {
     "_id": 5,
-    "name": "Pediatric Dental",
+    "name": "Laser Therapy",
     "slots": []
   },
   {
     "_id": 6,
-    "name": "Oral Surgery",
+    "name": "Radiology",
     "slots": [
       "08.00 AM - 08.30 AM",
       "08.30 AM - 09.00 AM",
