@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image1 from "../../assets/servicesImage/About.jpeg";
+import image1 from "../../assets/servicesImage/About.avif";
 const InfoSection = () => {
   return (
     <div>
