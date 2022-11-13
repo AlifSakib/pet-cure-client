@@ -1,10 +1,31 @@
 import { format } from "date-fns";
 import React, { useState } from "react";
 
-const BookingModal = ({ handleModal, modal, option, selected }) => {
+const BookingModal = ({ handleModal, modal, option, selected, setOptions }) => {
   const { name, slots } = option;
   const date = format(selected, "PP");
   const [selectedOption, setSetSelectedOerson] = useState(slots[0]);
+
+  const handleBooking = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const slot = form.slot.value;
+    const phone = form.phone.value;
+
+    const booking = {
+      appointmentDate: date,
+      option: name,
+      patient: name,
+      slot,
+      email,
+      phone,
+    };
+
+    console.log(booking);
+    setOptions(null);
+  };
   return (
     <div>
       <div id="booking-modal" class="rounded-xl  p-4 shadow-xl bg-blue-900">
@@ -33,7 +54,7 @@ const BookingModal = ({ handleModal, modal, option, selected }) => {
             </strong>
 
             <p class="mt-1 text-sm text-white">{name}</p>
-            <form>
+            <form onSubmit={handleBooking}>
               <div className="mb-2">
                 <input
                   type="text"
@@ -42,10 +63,11 @@ const BookingModal = ({ handleModal, modal, option, selected }) => {
                   disabled
                   placeholder="john@rhcp.com"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+                  name="date"
                 />
               </div>
               <div className="mb-2">
-                <select name="" id="" className="w-full rounded-lg">
+                <select name="slot" id="" className="w-full rounded-lg">
                   {slots.map((slot) => (
                     <option value={slot}>{slot}</option>
                   ))}
@@ -54,9 +76,10 @@ const BookingModal = ({ handleModal, modal, option, selected }) => {
               <div className="mb-2">
                 <input
                   type="text"
-                  id="UserEmail"
-                  placeholder="john@rhcp.com"
+                  id="name"
+                  placeholder="Your Name"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+                  name="name"
                 />
               </div>
               <div className="mb-2">
@@ -65,14 +88,16 @@ const BookingModal = ({ handleModal, modal, option, selected }) => {
                   id="UserEmail"
                   placeholder="john@rhcp.com"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+                  name="email"
                 />
               </div>
               <div className="mb-2">
                 <input
                   type="text"
-                  id="UserEmail"
-                  placeholder="john@rhcp.com"
+                  id="Phone Number"
+                  placeholder="Phone Number"
                   class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+                  name="phone"
                 />
               </div>
               <div class="mt-4 flex gap-2 ">

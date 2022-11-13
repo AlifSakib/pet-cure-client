@@ -10,6 +10,7 @@ const AvailableAppointments = ({ selected }) => {
       .then((res) => res.json())
       .then((data) => setOptions(data));
   }, []);
+
   return (
     <div className="my-16 w-9/12 mx-auto">
       <p className="text-center text-2xl text-blue-900">
@@ -21,6 +22,7 @@ const AvailableAppointments = ({ selected }) => {
             key={option._id}
             option={option}
             selected={selected}
+            setOptions={setOptions}
           ></AppointmentOption>
         ))}
         <div></div>

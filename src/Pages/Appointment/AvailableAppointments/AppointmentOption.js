@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BookingModal from "../BookingModal/BookingModal";
 
-const AppointmentOption = ({ option, selected }) => {
+const AppointmentOption = ({ option, selected, setOptions }) => {
   const { name, slots } = option;
   const [modal, setModal] = useState(false);
 
@@ -29,6 +29,7 @@ const AppointmentOption = ({ option, selected }) => {
 
         <button
           onClick={() => setModal(!modal)}
+          disabled={slots.length === 0}
           class="mt-16 inline-flex items-center text-blue-900"
         >
           <p class="text-lg font-medium">Book Appointment</p>
@@ -57,6 +58,7 @@ const AppointmentOption = ({ option, selected }) => {
                 handleModal={handleModal}
                 option={option}
                 selected={selected}
+                setOptions={setOptions}
               ></BookingModal>
             </div>
           )}
