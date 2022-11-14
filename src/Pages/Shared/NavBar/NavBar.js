@@ -31,16 +31,18 @@ export const NavBar = () => {
           Appoinment
         </Link>
       </li>
-      <li>
-        <Link
-          to=""
-          aria-label="Product pricing"
-          title="Product pricing"
-          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-        >
-          About
-        </Link>
-      </li>
+      {user && (
+        <li>
+          <Link
+            to="/dashboard"
+            aria-label="Product pricing"
+            title="Product pricing"
+            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+          >
+            Reviews
+          </Link>
+        </li>
+      )}
     </React.Fragment>
   );
 

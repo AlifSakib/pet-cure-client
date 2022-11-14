@@ -16,8 +16,7 @@ const Signup = () => {
         const user = result.user;
         updateInfo({ displayName: data.name })
           .then((result) => {
-            const user = result.user;
-            console.log(user);
+            console.log("profile updated");
           })
           .then((error) => {
             console.error(error);
