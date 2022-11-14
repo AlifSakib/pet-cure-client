@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contexts/AuthProvider";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -10,7 +12,14 @@ const Login = () => {
   } = useForm();
 
   const handleLogin = (data) => {
-    console.log(data);
+    login(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((err) => {
+        console.log(console.error(err));
+      });
   };
   return (
     <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">

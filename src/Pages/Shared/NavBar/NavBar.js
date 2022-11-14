@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Contexts/AuthProvider";
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout();
+  };
   const menuItem = (
     <React.Fragment>
       <li>
@@ -70,16 +76,29 @@ export const NavBar = () => {
         </Link>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           {menuItem}
-          <li>
-            <Link
-              to="/login"
-              className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
-              aria-label="Log in"
-              title="Log in"
-            >
-              Log in
-            </Link>
-          </li>
+          {user?.uid ? (
+            <li>
+              <button
+                onClick={handleLogout}
+                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
+                aria-label="Log in"
+                title="Log in"
+              >
+                Logout
+              </button>
+            </li>
+          ) : (
+            <li>
+              <Link
+                to="/login"
+                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-pink-900 focus:shadow-outline focus:outline-none"
+                aria-label="Log in"
+                title="Log in"
+              >
+                Log in
+              </Link>
+            </li>
+          )}
         </ul>
 
         <div className="lg:hidden">
