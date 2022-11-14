@@ -16,28 +16,33 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const login = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logout = () => {
+    setLoading(true);
     signOut(auth);
   };
 
   const updateInfo = (profile) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, profile);
   };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
-  const value = { createUser, login, user, logout, updateInfo };
+  const value = { createUser, login, user, logout, updateInfo, loading };
   return (
     <div>
       <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
