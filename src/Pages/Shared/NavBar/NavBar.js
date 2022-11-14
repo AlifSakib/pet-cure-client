@@ -39,7 +39,7 @@ export const NavBar = () => {
             title="Product pricing"
             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
           >
-            Reviews
+            Dashboard
           </Link>
         </li>
       )}

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider";
 const Signup = () => {
@@ -16,7 +17,7 @@ const Signup = () => {
         const user = result.user;
         updateInfo({ displayName: data.name })
           .then((result) => {
-            console.log("profile updated");
+            toast.success("Singup Success");
           })
           .then((error) => {
             console.error(error);

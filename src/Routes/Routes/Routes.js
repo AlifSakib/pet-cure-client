@@ -31,10 +31,10 @@ export const router = createBrowserRouter([
         path: "/appointment",
         element: <Appointment></Appointment>,
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard></Dashboard>,
-      },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
   },
 ]);
