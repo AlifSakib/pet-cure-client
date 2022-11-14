@@ -8,14 +8,14 @@ const Signup = () => {
     formState: { errors },
   } = useForm();
 
-  const handleLogin = (data) => {
+  const handleSignup = (data) => {
     console.log(data);
   };
   return (
     <div>
       <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div class="mx-auto max-w-lg text-center">
-          <form onSubmit={handleSubmit(handleLogin)}>
+          <form onSubmit={handleSubmit(handleSignup)}>
             <h1 className="text-start text-gray-700">Name</h1>
             <input
               className="block w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm mb-4 border"
@@ -35,7 +35,11 @@ const Signup = () => {
               type="password"
               {...register("password", {
                 required: "Password Is Required",
-                minLength: { value: 6, message: "Must be 6 character" },
+                pattern: {
+                  value:
+                    /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/,
+                  message: "Password Must be Strong",
+                },
               })}
             />
             {errors.password && <p role="alert">{errors.password?.message}</p>}
