@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1,
     "name": "Wellness & Vacination",
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -22,7 +21,6 @@
     ]
   },
   {
-    "_id": 2,
     "name": "Surgery",
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -44,7 +42,6 @@
     ]
   },
   {
-    "_id": 3,
     "name": "Dentistry",
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -66,7 +63,6 @@
     ]
   },
   {
-    "_id": 4,
     "name": "Acupunture",
     "slots": [
       "08.00 AM - 08.30 AM",
@@ -88,12 +84,10 @@
     ]
   },
   {
-    "_id": 5,
     "name": "Laser Therapy",
     "slots": []
   },
   {
-    "_id": 6,
     "name": "Radiology",
     "slots": [
       "08.00 AM - 08.30 AM",
